@@ -1,0 +1,8 @@
+{
+  "name": "Tindev",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "5f8b7ea2"
+}
