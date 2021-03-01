@@ -5,7 +5,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+import ExploreContainer from "../../components/ExploreContainer";
 
 import "./Tab1.css";
 
@@ -14,7 +14,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1 - Teste</IonTitle>
+          <IonTitle>Discover</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
