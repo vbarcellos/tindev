@@ -1,0 +1,2 @@
+git clone https://github.com/vbarcellos/tindev.git tindev
+ionic serve
