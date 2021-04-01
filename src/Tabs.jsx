@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 
-/* Theme variables */
 import './theme/variables.css';
 
 import { Redirect, Route } from 'react-router-dom';
@@ -16,12 +15,10 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 
 import {
-  home,
-  homeOutline,
-  homeSharp,
-  informationCircle,
+  chatbubble,
+  code,
+  notifications,
   person,
-  search
 } from 'ionicons/icons';
 
 
@@ -48,20 +45,16 @@ const Tabs = () => {
       
       <IonTabBar slot="bottom">
         <IonTabButton tab="browse" href="/app/home">
-          <IonIcon icon={home} />
-          <IonLabel>Home</IonLabel>
+          <IonIcon icon={code} />
         </IonTabButton>
-        <IonTabButton tab="search" href="/app/search">
-          <IonIcon icon={search} />
-          <IonLabel>Search</IonLabel>
+        <IonTabButton tab="chat" href="/app/chat">
+          <IonIcon icon={chatbubble} />
         </IonTabButton>
-        <IonTabButton tab="account" href="/app/account">
+        <IonTabButton tab="notifications" href="/app/notifications">
+          <IonIcon icon={notifications} />
+        </IonTabButton>
+          <IonTabButton tab="account" href="/app/account">
           <IonIcon icon={person} />
-          <IonLabel>Your Library</IonLabel>
-        </IonTabButton>
-          <IonTabButton tab="readme" href="/app/readme">
-          <IonIcon icon={informationCircle} />
-          <IonLabel>README</IonLabel>
         </IonTabButton>
       </IonTabBar>
     </IonTabs>
