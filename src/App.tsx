@@ -9,13 +9,9 @@ import "@ionic/react/css/core.css";
 import { Redirect, Route } from "react-router-dom";
 import { IonApp, IonRouterOutlet, IonPage } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-
-// import { home, informationCircle, person, search } from "ionicons/icons";
-
 import { AppContextProvider } from "./State";
 
 import urls from "./urls";
-
 import Tabs from "./Tabs";
 import Login from "./pages/Login";
 import ResetPassword from "./pages/ResetPassword";
