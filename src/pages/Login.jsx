@@ -67,7 +67,7 @@ const Login = ({ track, history }) => {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent className="form">
+      <IonContent className="form-div">
         <IonLoading
           isOpen={showLoading}
           message="Logging in..."
@@ -97,15 +97,6 @@ const Login = ({ track, history }) => {
           </IonList>
         </form>
         <div className="below-form">
-          <a
-            href="#/"
-            onClick={(e) => {
-              e.preventDefault();
-              goTo("/app/reset-password");
-            }}
-          >
-            Forgot your password?
-          </a>
           <IonButton
             type="button"
             onClick={(e) => {
@@ -115,6 +106,15 @@ const Login = ({ track, history }) => {
           >
             No account? Sign up!
           </IonButton>
+          <a
+            href="#/"
+            onClick={(e) => {
+              e.preventDefault();
+              goTo("/app/reset-password");
+            }}
+          >
+            Forgot your password?
+          </a>
         </div>
       </IonContent>
     </IonPage>

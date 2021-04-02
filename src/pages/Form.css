@@ -1,23 +1,50 @@
-.form .below-form {
-    padding: 15px 0;
-    text-align: center;
-  }
-  
-  .form ion-button {
-    margin: 16px 16px 0 16px;
-  }
-  
-  .form a {
-    display: block;
-    margin-bottom: 15px;
-  }
-  
-  .form a.create {
-    font-size: 18px;
-  }
-  
-  .form a:last-child {
-    color: #aaa;
-    text-decoration: none;
-  }
-  
+.form-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-div form {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  background-color: blueviolet;
+}
+
+.form-div ion-list {
+  background-color: white;
+}
+
+.form-div ion-label ion-input {
+  background-color: white ;
+}
+
+.form-div .below-form {
+  padding: 15px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.form-div > .below-form {
+  height: 30%;
+}
+
+.form-div ion-button {
+  margin: 16px 16px 0 16px;
+}
+
+.form-div a {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #aaa;
+}
+
+.form-div a.create {
+  font-size: 18px;
+}
+
+.form-div a:last-child {
+  color: #aaa;
+  text-decoration: none;
+}
