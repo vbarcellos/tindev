@@ -23,7 +23,7 @@ import urls from "../urls";
 import "./Form.css";
 
 const Login = ({ track, history }) => {
-  const { dispatch } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,7 +42,7 @@ const Login = ({ track, history }) => {
     try {
       setShowLoading(true);
 
-      const user = await login(email, password);
+      const user = await login(state, email, password);
 
       dispatch(loggedIn(user));
 
