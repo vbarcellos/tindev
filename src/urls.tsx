@@ -5,6 +5,7 @@ const URLS = {
   LOGIN: "/app/login",
   SIGNUP: "/app/signup",
   RESET_PASSWORD: "/app/reset-password",
+  CHATS: "/app/chats",
 };
 
 export default URLS;
