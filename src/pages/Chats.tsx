@@ -17,8 +17,6 @@ function Chats(props: any) {
 
   const usuario = getUser(state);
 
-  console.log("usuario :>> ", usuario);
-
   const detalharConversa = useCallback((chat: object) => {
     console.log("chat :>> ", chat);
   }, []);
@@ -26,14 +24,14 @@ function Chats(props: any) {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="light">
           <IonTitle>Chats</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       {/* Porque a lista está alinhada ao fim? */}
       <IonList>
-        {usuario?.openChats.map((chat: any) => (
+        {usuario?.openChats?.map((chat: any) => (
           <IonItem
             color="primary"
             key={chat}
