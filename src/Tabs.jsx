@@ -23,6 +23,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ResetPassword from "./pages/ResetPassword";
 import Chats from "./pages/Chats";
+import Account from "./pages/Account";
 
 const Tabs = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -45,6 +46,7 @@ const Tabs = () => {
             exact={true}
           />
           <Route path="/app/chats" component={Chats} exact={true} />
+          <Route path="/app/account" component={Account} exact={true} />
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">

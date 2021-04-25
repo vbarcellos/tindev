@@ -17,8 +17,6 @@ import { Slides } from "./components/Slides";
 const Home = ({ track, history }) => {
   const { state, dispatch } = useContext(AppContext);
 
-  console.log("state :>> ", state);
-
   const goTo = useCallback(
     (path) => {
       history.push(path, { direction: "forward" });

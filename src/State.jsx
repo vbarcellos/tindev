@@ -3,10 +3,6 @@ import React from "react";
 export const AppContext = React.createContext();
 
 const reducer = (state, action) => {
-  // const playing = getPlaying(state);
-  // const ct = getCurrentTrack(state);
-  // const user = getUser(state);
-
   switch (action.type) {
     case "LOGOUT": {
       return {
@@ -17,7 +13,7 @@ const reducer = (state, action) => {
         },
       };
     }
-    case "LOGGED_IN": {
+    case "LOGIN": {
       return {
         ...state,
         auth: {
@@ -31,6 +27,24 @@ const reducer = (state, action) => {
       return {
         ...state,
         users: [...state?.users, action.user],
+      };
+    }
+
+    case "UPDATE_USER": {
+      const updatedUserIndex = state?.users.findIndex(
+        (registeredUser) => registeredUser?._id === action?.user?._id
+      );
+
+      let updatedUsers = state?.users || [];
+      updatedUsers[updatedUserIndex] = action?.user;
+
+      return {
+        ...state,
+        users: updatedUsers,
+        auth: {
+          ...state?.auth,
+          user: action?.user,
+        },
       };
     }
 
@@ -67,6 +81,7 @@ const initialState = {
   },
   users: [
     {
+      _id: "1",
       email: "admin@gmail.com",
       name: "admin",
       password: "123456",
@@ -76,6 +91,7 @@ const initialState = {
       position: "Sys admin",
     },
     {
+      _id: "2",
       email: "victor@gmail.com",
       name: "Victor Barcellos",
       password: "123456",
@@ -92,6 +108,7 @@ const initialState = {
       ],
     },
     {
+      _id: "3",
       email: "pedro@gmail.com",
       name: "Pedro Antônio",
       password: "123456",
@@ -102,6 +119,7 @@ const initialState = {
       position: "Front-End Developer",
     },
     {
+      _id: "4",
       email: "joao@gmail.com",
       name: "João Silva",
       password: "123456",
@@ -134,12 +152,17 @@ export const logout = () => ({
 });
 
 export const loggedIn = (user) => ({
-  type: "LOGGED_IN",
+  type: "LOGIN",
   user,
 });
 
 export const signup = (user) => ({
   type: "SIGN_UP",
+  user,
+});
+
+export const updateUser = (user) => ({
+  type: "UPDATE_USER",
   user,
 });
 
