@@ -10,6 +10,7 @@ import {
 import { AppContext, getUsers } from "../State";
 
 import "./Home.css";
+import tindevIcon from "../images/tindev_icon.png"
 
 import { Slides } from "./components/Slides";
 
@@ -29,13 +30,13 @@ const Home = ({ track, history }) => {
     if (!state?.auth?.user) {
       return (
         <>
-          <div className="title-div">
-            <h1 className="tindev-title">Tindev</h1>
+          <div className="icon-div">
+            <img src={tindevIcon} alt=""/>
           </div>
           <div className="content-div">
             <div>
               <span className="subTitle">
-                The perfect app to find your next job or your new employee
+                Embrace the future of hiring
               </span>
             </div>
             <div className="buttons-div">
