@@ -5,9 +5,9 @@ import {
   IonList, IonItem, IonLabel, IonInput, IonLoading
 } from '@ionic/react';
 
-import { AppContext, loggedIn } from '../State';
+import { AppContext, signup } from '../State';
 
-import { signup } from '../auth';
+import { authenticate } from '../auth';
 
 import urls from '../urls';
 
@@ -35,9 +35,9 @@ const Signup = ({ track, history }) => {
     try {
       setShowLoading(true);
       
-      const user = await signup(email, password);
+      const user = await authenticate(name, username, email, password);
 
-      dispatch(loggedIn(user));
+      dispatch(signup(user));
 
       history.replace(urls.APP_HOME);
 
