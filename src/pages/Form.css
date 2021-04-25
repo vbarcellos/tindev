@@ -5,14 +5,25 @@
 }
 
 .form-div form {
-  height: 70%;
+  height: 63.5%;
   display: flex;
   justify-content: center;
-  background-color: blueviolet;
+}
+
+.item, .list, .item-content, .item-complex {
+  --ion-background-color: transparent !important;
+}
+
+.item .item-input {
+  background-color: white;
 }
 
 .form-div ion-list {
   background-color: white;
+}
+
+.form-div .list-md{
+  padding-top: 0;
 }
 
 .form-div ion-label ion-input {

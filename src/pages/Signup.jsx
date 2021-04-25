@@ -59,11 +59,11 @@ const Signup = ({ track, history }) => {
         <IonTitle>Sign up</IonTitle>
       </IonToolbar>
     </IonHeader>
-    <IonContent className="form">
+    <IonContent className="form-div">
       <IonLoading isOpen={showLoading} message="Creating account..." onDidDismiss={() => setShowLoading(false)}/>
       <form onSubmit={handleSubmit} method="post" ref={formRef} action="">
         <IonList>
-          <IonItem>
+          <IonItem >
             <IonLabel position={'fixed'}>Name</IonLabel>
             <IonInput name="name" type="text" value={name} onInput={e => setName(e.currentTarget.value)} />
           </IonItem>
