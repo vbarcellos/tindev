@@ -33,7 +33,7 @@ function Chats(props: any) {
 
       {/* Porque a lista está alinhada ao fim? */}
       <IonList>
-        {usuario?.openChats.map((chat: any) => (
+        {usuario?.openChats?.map((chat: any) => (
           <IonItem
             color="primary"
             key={chat}
