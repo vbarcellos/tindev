@@ -56,10 +56,10 @@ export const ResetPassword = ({ history, match }) => {
           </IonItem>
           <IonButton expand="block" type="submit">Reset Password</IonButton>
         </IonList>
-      </form>
       <div className="below-form">
         <Link to='/app/login'>Back to login</Link>
       </div>
+      </form>
     </IonContent>
   </IonPage>
   );
