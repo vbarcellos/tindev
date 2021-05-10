@@ -15,6 +15,7 @@
     "@types/react-dom": "^16.9.10",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
+    "firebase": "^8.5.0",
     "ionicons": "^5.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -62,7 +63,8 @@
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.6",
-    "@ionic/lab": "3.2.10"
+    "@ionic/lab": "3.2.10",
+    "@types/firebase": "^3.2.1"
   },
   "description": "An Ionic project"
 }

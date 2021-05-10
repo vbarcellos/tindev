@@ -15,9 +15,10 @@ import {
   IonLoading,
 } from "@ionic/react";
 
-import { AppContext, loggedIn } from "../State";
+import { AppContext, localLogin } from "../State";
 
-import { login } from "../auth";
+import { authenticate } from "../firebaseConfig";
+
 import urls from "../urls";
 
 import "./Form.css";
@@ -42,9 +43,12 @@ const Login = ({ track, history }) => {
     try {
       setShowLoading(true);
 
-      const user = await login(state, email, password);
+      const firebaseUser = await authenticate(email, password);
+      const user = state?.users.find(
+        (user) => user.email === firebaseUser?.email
+      );
 
-      dispatch(loggedIn(user));
+      dispatch(localLogin(user));
 
       history.replace(urls.APP_HOME);
 

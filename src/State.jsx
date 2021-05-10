@@ -151,7 +151,7 @@ export const logout = () => ({
   type: "LOGOUT",
 });
 
-export const loggedIn = (user) => ({
+export const localLogin = (user) => ({
   type: "LOGIN",
   user,
 });
